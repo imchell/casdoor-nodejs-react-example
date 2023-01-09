@@ -12,14 +12,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The example includes two parts:
 
-Name     | SDK                | Language             | Source code
-----------|--------------------|----------------------|----
- Frontend | casdoor-js-sdk     | Javascript + React   | https://github.com/casdoor/casdoor-nodejs-react-example/tree/master/src 
- Backend  | casdoor-nodejs-sdk | JavaScript + Express | https://github.com/casdoor/casdoor-nodejs-react-example/tree/master/backend 
+| Name     | SDK                | Language             | Source code                                                                 |
+|----------|--------------------|----------------------|-----------------------------------------------------------------------------|
+| Frontend | casdoor-js-sdk     | Javascript + React   | https://github.com/casdoor/casdoor-nodejs-react-example/tree/master/src     | 
+| Backend  | casdoor-nodejs-sdk | JavaScript + Express | https://github.com/casdoor/casdoor-nodejs-react-example/tree/master/backend | 
 
 ## Installation
 
-Example uses Casdoor to manage members. So you need to create an organization and an application for the example in a Casdoor instance.
+The example uses Casdoor to manage members, so you need to create an organization and an application in a Casdoor instance in advance.
 
 ### Necessary Configurations
 
@@ -39,7 +39,7 @@ git clone https://github.com/casdoor/casdoor-nodejs-react-example
 
 #### Backend Configs
 
-Initialization requires 6 (or 5) parameters, which are all str type. Please refer to the official doc on [backend sdk configuration](https://casdoor.org/docs/how-to-connect/sdk#1-backend-sdk-configuration) for the latest change.
+Initialization requires 6 (or 5) parameters, all in string type. Please refer to the official doc on [backend SDK configuration](https://casdoor.org/docs/how-to-connect/sdk#1-backend-sdk-configuration) for the latest change.
 
 | Parameter        | Must | Description                                                                   |
 |------------------|------|-------------------------------------------------------------------------------|
@@ -63,7 +63,7 @@ const authCfg = {
 
 #### Frontend Configs
 
-The first 4 parameters should use the same value as the Casdoor backend SDK. The last parameter redirectPath is relative path for the redirected URL, returned from Casdoor's login page. Please refer to the official doc on [frontend sdk configuration](https://casdoor.org/docs/how-to-connect/sdk#2-frontend-configuration) for the latest change.
+The first 4 parameters should use the same value as the Casdoor backend SDK. The last parameter redirectPath is relative path for the redirected URL, returned from Casdoor's login page. For the latest change, please refer to the official doc on [frontend SDK configuration](https://casdoor.org/docs/how-to-connect/sdk#2-frontend-configuration).
 
 ```js
 // in ./src/Setting.js
@@ -76,32 +76,24 @@ const config = {
 };
 ```
 
-After setting configurations up, install all dependencies by running `yarn install`. While Casdoor is operating, run the following scripts.
+After setting configurations up, install all dependencies by running `yarn install`. Then, while Casdoor is operating, run the following scripts.
 
 ### Available Scripts
 
-In the project directory, you can run:
-
-```shell
-yarn install
-```
-
-Installs all necessary dependencies.
+Launch the backend powered by Express at [http://localhost:8080](http://localhost:8080):
 
 ```shell
 node backend/server.js
 ```
 
-Runs the backend powered by Express at [http://localhost:8080](http://localhost:8080).
+Launch the frontend app in the development mode:
 
 ```shell
 yarn start
 ```
 
-Runs the app in the development mode.
-
 Note that the port running frontend is set in `package.json`:
 
 `"start": "PORT=9000 react-scripts start"`
 
-Open [http://localhost:9000](http://localhost:9000) to view it in your browser.
+Open [http://localhost:9000](http://localhost:9000) in your browser to view it.
